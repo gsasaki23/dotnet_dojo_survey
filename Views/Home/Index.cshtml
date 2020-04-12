@@ -1,0 +1,43 @@
+@using dojo_survey.Models;
+@model User;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+    <form action="/result" method="POST">
+        <div>
+            <label>Your Name:</label>
+            <input type="text" name="FullName"/>
+        </div>
+        <div>
+            <label>Dojo Location:</label>
+            <select name="Location">
+                <option value="Orange County">Orange County</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="San Jose">San Jose</option>
+                <option value="Seattle">Seattle</option>
+            </select>
+        </div>
+        <div>
+            <label>Favorite Language:</label>
+            <select name="Language">
+                <option value="C#">C#</option>
+                <option value="Python">Python</option>
+                <option value="Javascript">Javascript</option>
+            </select>
+        </div>
+        <div>
+            <label>Comment(optional):</label>
+            <textarea name="Comment" cols="30" rows="10"></textarea>
+        </div>
+        
+        <input type="submit"/>
+    </form>
+
+</body>
+</html>
